@@ -24,7 +24,7 @@ public class ColaPrioridadBusquedaHeuristica<T> extends ListaBusqueda<T> {
         }
         else{
             Nodo<T> cima = this.cab;
-            while(cima.sig != null && (cima.arco.accion+heuristica.obtener(cima.arco.e) < a.accion+heuristica.obtener(a.e))){
+            while(cima.sig != null && (cima.arco.accion+heuristica.obtener(cima.arco.e) <= a.accion+heuristica.obtener(a.e))){
                 cima = cima.sig;
             }
             aux.sig = cima.sig;

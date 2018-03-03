@@ -19,7 +19,7 @@ public class ColaPrioridadBusqueda<T> extends ListaBusqueda<T> {
         }
         else{
             Nodo<T> cima = this.cab;
-            while(cima.arco.accion<a.accion){
+            while(cima.sig != null && cima.arco.accion<=a.accion){
                 cima = cima.sig;
             }
             aux.sig = cima.sig;
