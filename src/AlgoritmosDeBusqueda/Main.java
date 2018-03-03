@@ -13,9 +13,15 @@ public class Main {
     public static void main(String[] args) {
         CuadroSucesor sucesorCuadro = new CuadroSucesor();
         CuadroObjetivo objetivoCuadro = new CuadroObjetivo();
-        BFS buscadorProfundidad = new BFS(sucesorCuadro,objetivoCuadro);
+        //BFS buscadorAmplitud = new BFS(sucesorCuadro,objetivoCuadro);
+        //DFS buscadorProfundidad = new DFS(sucesorCuadro,objetivoCuadro);
+        DFSLimitado buscadorProfundidadLimitada = new DFSLimitado(sucesorCuadro,objetivoCuadro,3);
+        //LimiteIterado buscadorProfundidadIterada = new LimiteIterado(sucesorCuadro,objetivoCuadro);
         CuadroTablero cuadroInicial = new CuadroTablero();
-        Arco<CuadroTablero> encontrado = buscadorProfundidad.aplicar(cuadroInicial);
+        //Arco<CuadroTablero> encontrado = buscadorAmplitud.aplicar(cuadroInicial);
+        Arco<CuadroTablero> encontrado = buscadorProfundidadLimitada.aplicar(cuadroInicial);
+        //Arco<CuadroTablero> encontrado = buscadorProfundidad.aplicar(cuadroInicial);
+        //Arco<CuadroTablero> encontrado = buscadorProfundidadIterada.aplicar(cuadroInicial);
         CuadroTablero tableroEncontrado = encontrado.e;
         System.out.println("tablero encontrado:");
         tableroEncontrado.printTablero();
