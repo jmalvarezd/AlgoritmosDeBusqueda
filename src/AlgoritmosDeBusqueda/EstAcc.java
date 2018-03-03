@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package AlgoritmosDeBusqueda;
+
 /**
  *
  * @author Jmad

@@ -9,7 +9,7 @@ package AlgoritmosDeBusqueda;
  *
  * @author Usuario
  */
-public class CuadroTablero {
+public class CuadroTablero implements Cloneable {
     public static final int CUADRO1 = 1;
     public static final int CUADRO2 = 2;
     public static final int CUADRO3 = 3;
@@ -49,7 +49,16 @@ public class CuadroTablero {
     	this.data[3][2] = CuadroTablero.VACIO;
     	this.data[3][3] = CuadroTablero.CUADRO15;
     }
-    
+   @Override
+   public Object clone(){
+        CuadroTablero clon = null;
+        try{
+            clon = (CuadroTablero)super.clone();
+        }catch(CloneNotSupportedException ex){
+            System.out.println(" no se puede duplicar");
+        }
+         return clon;
+    }
     public CuadroTablero( int[][] data ){ this.data = data; }
     
     public void reset( int x, int y ){ this.data[x][y]=0; }
