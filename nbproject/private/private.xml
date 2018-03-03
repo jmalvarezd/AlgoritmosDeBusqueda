@@ -3,21 +3,14 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/D:/Documentos/NetBeansProjects/dfs/src/dfs/Main.java</file>
-            <file>file:/D:/Documentos/NetBeansProjects/dfs/src/dfs/CuadroSucesorAbstracta.java</file>
-            <file>file:/D:/Documentos/NetBeansProjects/dfs/src/dfs/DFS.java</file>
-            <file>file:/D:/Documentos/NetBeansProjects/dfs/src/dfs/BFS.java</file>
-            <file>file:/D:/Documentos/NetBeansProjects/dfs/src/dfs/PilaBusqueda.java</file>
-            <file>file:/D:/Documentos/NetBeansProjects/dfs/src/dfs/EstAcc.java</file>
-            <file>file:/D:/Documentos/NetBeansProjects/dfs/src/dfs/CuadroObjetivoAbstracta.java</file>
-            <file>file:/D:/Documentos/NetBeansProjects/dfs/src/dfs/CuadroObjetivo.java</file>
-            <file>file:/D:/Documentos/NetBeansProjects/dfs/src/dfs/CuadroSucesor.java</file>
-            <file>file:/D:/Documentos/NetBeansProjects/dfs/src/dfs/ListaBusqueda.java</file>
-            <file>file:/D:/Documentos/NetBeansProjects/dfs/src/dfs/Arco.java</file>
-            <file>file:/D:/Documentos/NetBeansProjects/dfs/src/dfs/Sucesor.java</file>
-            <file>file:/D:/Documentos/NetBeansProjects/dfs/src/dfs/ColBusqueda.java</file>
-            <file>file:/D:/Documentos/NetBeansProjects/dfs/src/dfs/Busqueda.java</file>
-            <file>file:/D:/Documentos/NetBeansProjects/dfs/src/dfs/CuadroTablero.java</file>
+            <file>file:/D:/Documentos/NetBeansProjects/AlgoritmosDeBusqueda/src/AlgoritmosDeBusqueda/Main.java</file>
+            <file>file:/D:/Documentos/NetBeansProjects/AlgoritmosDeBusqueda/src/AlgoritmosDeBusqueda/Objetivo.java</file>
+            <file>file:/D:/Documentos/NetBeansProjects/AlgoritmosDeBusqueda/src/AlgoritmosDeBusqueda/ColaBusqueda.java</file>
+            <file>file:/D:/Documentos/NetBeansProjects/AlgoritmosDeBusqueda/src/AlgoritmosDeBusqueda/ListaBusqueda.java</file>
+            <file>file:/D:/Documentos/NetBeansProjects/AlgoritmosDeBusqueda/src/AlgoritmosDeBusqueda/DFS.java</file>
+            <file>file:/D:/Documentos/NetBeansProjects/AlgoritmosDeBusqueda/src/AlgoritmosDeBusqueda/BFS.java</file>
+            <file>file:/D:/Documentos/NetBeansProjects/AlgoritmosDeBusqueda/src/AlgoritmosDeBusqueda/Busqueda.java</file>
+            <file>file:/D:/Documentos/NetBeansProjects/AlgoritmosDeBusqueda/src/AlgoritmosDeBusqueda/Arco.java</file>
         </group>
     </open-files>
 </project-private>

@@ -13,13 +13,13 @@ public class Main {
     public static void main(String[] args) {
         CuadroSucesor sucesorCuadro = new CuadroSucesor();
         CuadroObjetivo objetivoCuadro = new CuadroObjetivo();
-        BFS buscadorProfundidad = new BFS(sucesorCuadro,objetivoCuadro);
+        DFS buscadorProfundidad = new DFS(sucesorCuadro,objetivoCuadro);
         CuadroTablero cuadroInicial = new CuadroTablero();
         Arco<CuadroTablero> encontrado = buscadorProfundidad.aplicar(cuadroInicial);
-        System.out.println(cuadroInicial.data[3][2]);
+        System.out.println(cuadroInicial.get(3,2));
         CuadroTablero tableroEncontrado = encontrado.e;
         System.out.println("tablero encontrado:");
-        System.out.println(tableroEncontrado.data);
-        
+        tableroEncontrado.printTablero();
+        System.out.println("En " + encontrado.getAccion() + " pasos");
     }
 }
