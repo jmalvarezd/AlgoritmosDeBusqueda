@@ -13,6 +13,7 @@ public class PilaBusqueda<T> extends ListaBusqueda<T> {
     
     
     public void adicionar(Arco<T> a){
+        tamano++;
         Nodo<T> aux = new Nodo<T>();
         aux.arco = a;
         if(esvacia()){

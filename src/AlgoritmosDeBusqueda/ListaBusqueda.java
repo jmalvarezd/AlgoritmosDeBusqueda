@@ -18,7 +18,7 @@ public abstract class ListaBusqueda<T> implements ColBusqueda<T> {
     protected Nodo<T> cab = null;
     protected Nodo<T> col = null;
     
-    
+    protected int tamano = 0;
     //public void adicionar(Arco<T> a);
     public boolean esvacia(){ return this.cab==null; }
     public Arco<T> obtener(){
@@ -28,8 +28,12 @@ public abstract class ListaBusqueda<T> implements ColBusqueda<T> {
     public void remover(){
         if(this.cab!=null){
             this.cab = this.cab.sig;
+            tamano--;
             if(this.cab==null) col = null;
             
         }
+    }
+    public int tamano(){
+        return tamano;
     }
 }

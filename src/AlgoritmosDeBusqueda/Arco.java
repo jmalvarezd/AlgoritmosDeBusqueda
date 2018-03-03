@@ -13,13 +13,21 @@ public class Arco<T> {
     protected T e;
     protected T p;
     protected int accion;
+    protected int accionAcumulada;
     
     public Arco(T e, T p, int accion){
         this.e = e;
         this.p = p;
         this.accion = accion;
     }
+    public Arco(T e, T p, int accion,int accionAcumulada){
+        this.e = e;
+        this.p = p;
+        this.accion = accion;
+        this.accionAcumulada = accionAcumulada;
+    }
     public T getE(){ return this.e; }
     public T getP(){ return this.p; }
     public int getAccion(){ return this.accion; }
+    public int getAccionAcumulada(){ return this.accionAcumulada; }
 }

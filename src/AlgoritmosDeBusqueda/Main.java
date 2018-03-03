@@ -19,5 +19,6 @@ public class Main {
         CuadroTablero tableroEncontrado = encontrado.e;
         System.out.println("tablero encontrado:");
         tableroEncontrado.printTablero();
+        System.out.println("En " + encontrado.getAccionAcumulada()+ " pasos");
     }
 }

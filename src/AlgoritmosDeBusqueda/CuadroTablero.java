@@ -47,9 +47,9 @@ public class CuadroTablero implements Serializable {
     	this.data[2][3] = CuadroTablero.CUADRO12;
     	this.data[3][0] = CuadroTablero.CUADRO13;
         //MODIFICAR
-    	this.data[3][1] = CuadroTablero.VACIO;
-    	this.data[3][2] = CuadroTablero.CUADRO14;
-    	this.data[3][3] = CuadroTablero.CUADRO15;
+    	this.data[3][1] = CuadroTablero.CUADRO14;
+    	this.data[3][2] = CuadroTablero.CUADRO15;
+    	this.data[3][3] = CuadroTablero.VACIO;
     }
 
     public CuadroTablero( int[][] data ){ this.data = data; }

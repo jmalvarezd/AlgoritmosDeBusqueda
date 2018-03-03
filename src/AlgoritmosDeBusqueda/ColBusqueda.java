@@ -14,4 +14,5 @@ public interface ColBusqueda<T> {
     public boolean esvacia();
     public Arco<T> obtener();
     public void remover();
+    public int tamano();
 }
