@@ -18,7 +18,6 @@ public class CuadroSucesor extends CuadroSucesorAbstracta<CuadroTablero> {
     public Vector<EstAcc<CuadroTablero>> obtener(CuadroTablero estado) {
         Vector<EstAcc<CuadroTablero>> sucesores = new Vector<EstAcc<CuadroTablero>>();
 
-
         CuadroTablero aux = (CuadroTablero) UnoptimizedDeepCopy.copy(estado);
         int row = 0;
         int column = 0;
@@ -37,76 +36,9 @@ public class CuadroSucesor extends CuadroSucesorAbstracta<CuadroTablero> {
                 break;
             }
         }
-        if (row == 0 || column == 0 || row == 3 || column == 3) {
-            if (row == 0) {
-                aux.data[row][column] = estado.data[row + 1][column];
-                aux.data[row + 1][column] = estado.data[row][column];
-                sucesores.addElement(new EstAcc<CuadroTablero>(aux, 1));
-
-                aux = (CuadroTablero) UnoptimizedDeepCopy.copy(estado);
-                aux.data[row][column] = estado.data[row][column + 1];
-                aux.data[row][column + 1] = estado.data[row][column];
-                sucesores.addElement(new EstAcc<CuadroTablero>(aux, 1));
-                
-                aux = (CuadroTablero) UnoptimizedDeepCopy.copy(estado);
-                aux.data[row][column - 1] = estado.data[row][column];
-                aux.data[row][column] = estado.data[row][column - 1];
-                sucesores.addElement(new EstAcc<CuadroTablero>(aux, 1));
-                
-                return (sucesores);
-            } else if (row == 3) {
-                aux.data[row][column] = estado.get(row, column + 1);
-                aux.data[row][column + 1] = estado.get(row, column);
-                sucesores.addElement(new EstAcc<CuadroTablero>(aux, 1));
-                
-                aux = (CuadroTablero) UnoptimizedDeepCopy.copy(estado);
-                aux.data[row][column] = estado.get(row - 1, column);
-                aux.data[row - 1][column] = estado.get(row, column);
-                sucesores.addElement(new EstAcc<CuadroTablero>(aux, 1));
-                
-                aux.printTablero();
-                aux = (CuadroTablero) UnoptimizedDeepCopy.copy(estado);
-                aux.printTablero();
-                aux.data[row][column - 1] = estado.get(row, column);
-                aux.data[row][column] = estado.get(row, column - 1);
-                sucesores.addElement(new EstAcc<CuadroTablero>(aux, 1));
-                
-                return (sucesores);
-            } else if (column == 0) {
-                aux.data[row][column] = estado.data[row - 1][column];
-                aux.data[row - 1][column] = estado.data[row][column];
-                sucesores.addElement(new EstAcc<CuadroTablero>(aux, 1));
-                
-                aux = (CuadroTablero) UnoptimizedDeepCopy.copy(estado);
-                aux.data[row][column] = estado.data[row][column + 1];
-                aux.data[row][column + 1] = estado.data[row][column];
-                sucesores.addElement(new EstAcc<CuadroTablero>(aux, 1));
-                
-                aux = (CuadroTablero) UnoptimizedDeepCopy.copy(estado);
-                aux.data[row][column] = estado.data[row + 1][column];
-                aux.data[row + 1][column] = estado.data[row][column];
-                sucesores.addElement(new EstAcc<CuadroTablero>(aux, 1));
-                
-                return (sucesores);
-            } else if (column == 3) {
-                aux.data[row][column] = estado.data[row - 1][column];
-                aux.data[row - 1][column] = estado.data[row][column];
-                sucesores.addElement(new EstAcc<CuadroTablero>(aux, 1));
-                
-                aux = (CuadroTablero) UnoptimizedDeepCopy.copy(estado);
-                aux.data[row][column] = estado.data[row][column - 1];
-                aux.data[row][column - 1] = estado.data[row][column];
-                sucesores.addElement(new EstAcc<CuadroTablero>(aux, 1));
-                
-                aux = (CuadroTablero) UnoptimizedDeepCopy.copy(estado);
-                aux.data[row][column] = estado.data[row + 1][column];
-                aux.data[row + 1][column] = estado.data[row][column];
-                sucesores.addElement(new EstAcc<CuadroTablero>(aux, 1));
-                
-                return (sucesores);
-            }
-
-        } else if ((row == 0 && column == 0)) {
+        
+        // IF 0 IN CORNERS
+        if ((row == 0 && column == 0)) {
             aux.data[0][0] = estado.data[0][1];
             aux.data[0][1] = estado.data[0][0];
             sucesores.addElement(new EstAcc<CuadroTablero>(aux, 1));
@@ -150,25 +82,93 @@ public class CuadroSucesor extends CuadroSucesorAbstracta<CuadroTablero> {
             sucesores.addElement(new EstAcc<CuadroTablero>(aux, 1));
             
             return (sucesores);
+        }
+        //IF 0 IN EDGES
+        else if (row == 0 || column == 0 || row == 3 || column == 3) {
+            if (row == 0) {
+                aux.data[row][column] = estado.data[row + 1][column];
+                aux.data[row + 1][column] = estado.data[row][column];
+                sucesores.addElement(new EstAcc<CuadroTablero>(aux, 1));
+
+                aux = (CuadroTablero) UnoptimizedDeepCopy.copy(estado);
+                aux.data[row][column] = estado.data[row][column + 1];
+                aux.data[row][column + 1] = estado.data[row][column];
+                sucesores.addElement(new EstAcc<CuadroTablero>(aux, 1));
+                
+                aux = (CuadroTablero) UnoptimizedDeepCopy.copy(estado);
+                aux.data[row][column - 1] = estado.data[row][column];
+                aux.data[row][column] = estado.data[row][column - 1];
+                sucesores.addElement(new EstAcc<CuadroTablero>(aux, 1));
+                
+                return (sucesores);
+            } else if (row == 3) {
+                aux.data[row][column] = estado.get(row, column + 1);
+                aux.data[row][column + 1] = estado.get(row, column);
+                sucesores.addElement(new EstAcc<CuadroTablero>(aux, 1));
+                
+                aux = (CuadroTablero) UnoptimizedDeepCopy.copy(estado);
+                aux.data[row][column] = estado.get(row - 1, column);
+                aux.data[row - 1][column] = estado.get(row, column);
+                sucesores.addElement(new EstAcc<CuadroTablero>(aux, 1));
+                
+                aux = (CuadroTablero) UnoptimizedDeepCopy.copy(estado);
+                aux.data[row][column - 1] = estado.get(row, column);
+                aux.data[row][column] = estado.get(row, column - 1);
+                sucesores.addElement(new EstAcc<CuadroTablero>(aux, 1));
+                return (sucesores);
+            } else if (column == 0) {
+                aux.data[row][column] = estado.data[row - 1][column];
+                aux.data[row - 1][column] = estado.data[row][column];
+                sucesores.addElement(new EstAcc<CuadroTablero>(aux, 1));
+                
+                aux = (CuadroTablero) UnoptimizedDeepCopy.copy(estado);
+                aux.data[row][column] = estado.data[row][column + 1];
+                aux.data[row][column + 1] = estado.data[row][column];
+                sucesores.addElement(new EstAcc<CuadroTablero>(aux, 1));
+                
+                aux = (CuadroTablero) UnoptimizedDeepCopy.copy(estado);
+                aux.data[row][column] = estado.data[row + 1][column];
+                aux.data[row + 1][column] = estado.data[row][column];
+                sucesores.addElement(new EstAcc<CuadroTablero>(aux, 1));
+                
+                return (sucesores);
+            } else if (column == 3) {
+                aux.data[row][column] = estado.data[row - 1][column];
+                aux.data[row - 1][column] = estado.data[row][column];
+                sucesores.addElement(new EstAcc<CuadroTablero>(aux, 1));
+                
+                aux = (CuadroTablero) UnoptimizedDeepCopy.copy(estado);
+                aux.data[row][column] = estado.data[row][column - 1];
+                aux.data[row][column - 1] = estado.data[row][column];
+                sucesores.addElement(new EstAcc<CuadroTablero>(aux, 1));
+                
+                aux = (CuadroTablero) UnoptimizedDeepCopy.copy(estado);
+                aux.data[row][column] = estado.data[row + 1][column];
+                aux.data[row + 1][column] = estado.data[row][column];
+                sucesores.addElement(new EstAcc<CuadroTablero>(aux, 1));
+                
+                return (sucesores);
+            }
+        // IF 0 IN CENTER
         } else {
             aux.data[row][column] = estado.data[row - 1][column];
             aux.data[row - 1][column] = estado.data[row][column];
-            sucesores.addElement(new EstAcc(aux, 1));
+            sucesores.addElement(new EstAcc<CuadroTablero>(aux, 1));
             
             aux = (CuadroTablero) UnoptimizedDeepCopy.copy(estado);
             aux.data[row][column] = estado.data[row][column - 1];
             aux.data[row][column - 1] = estado.data[row][column];
-            sucesores.addElement(new EstAcc(aux, 1));
+            sucesores.addElement(new EstAcc<CuadroTablero>(aux, 1));
             
             aux = (CuadroTablero) UnoptimizedDeepCopy.copy(estado);
             aux.data[row][column] = estado.data[row + 1][column];
             aux.data[row + 1][column] = estado.data[row][column];
-            sucesores.addElement(new EstAcc(aux, 1));
+            sucesores.addElement(new EstAcc<CuadroTablero>(aux, 1));
             
             aux = (CuadroTablero) UnoptimizedDeepCopy.copy(estado);
             aux.data[row][column] = estado.data[row][column + 1];
             aux.data[row][column + 1] = estado.data[row][column];
-            sucesores.addElement(new EstAcc(aux, 1));
+            sucesores.addElement(new EstAcc<CuadroTablero>(aux, 1));
             return (sucesores);
 
         };
