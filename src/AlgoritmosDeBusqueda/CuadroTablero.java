@@ -11,11 +11,7 @@ import java.io.Serializable;
  *
  * @author Usuario
  */
-<<<<<<< HEAD
 public class CuadroTablero implements Serializable {
-=======
-public class CuadroTablero implements Cloneable {
->>>>>>> origin/master
     public static final int CUADRO1 = 1;
     public static final int CUADRO2 = 2;
     public static final int CUADRO3 = 3;
@@ -55,20 +51,7 @@ public class CuadroTablero implements Cloneable {
     	this.data[3][2] = CuadroTablero.VACIO;
     	this.data[3][3] = CuadroTablero.CUADRO15;
     }
-<<<<<<< HEAD
 
-=======
-   @Override
-   public Object clone(){
-        CuadroTablero clon = null;
-        try{
-            clon = (CuadroTablero)super.clone();
-        }catch(CloneNotSupportedException ex){
-            System.out.println(" no se puede duplicar");
-        }
-         return clon;
-    }
->>>>>>> origin/master
     public CuadroTablero( int[][] data ){ this.data = data; }
     
     public void set( int x, int y, int i ){ this.data[x][y]=i; }
