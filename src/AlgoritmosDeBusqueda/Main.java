@@ -17,13 +17,15 @@ public class Main {
 //        DFS buscadorProfundidad = new DFS(sucesorCuadro,objetivoCuadro);
 //        DFSLimitado buscadorProfundidadLimitada = new DFSLimitado(sucesorCuadro,objetivoCuadro);
 //        LimiteIterado buscadorProfundidadIterada = new LimiteIterado(sucesorCuadro,objetivoCuadro);
-        CostoUniforme buscadorCostoUniforme = new CostoUniforme(sucesorCuadro, objetivoCuadro);
+//        CostoUniforme buscadorCostoUniforme = new CostoUniforme(sucesorCuadro, objetivoCuadro);
+        Astar buscadorAstar = new Astar(sucesorCuadro, objetivoCuadro, new HeuristicaRabon());
         CuadroTablero cuadroInicial = new CuadroTablero();
 //        Arco<CuadroTablero> encontrado = buscadorAmplitud.aplicar(cuadroInicial);
 //        Arco<CuadroTablero> encontrado = buscadorProfundidad.aplicar(cuadroInicial);
 //        Arco<CuadroTablero> encontrado = buscadorProfundidadLimitada.aplicar(cuadroInicial);     
 //        Arco<CuadroTablero> encontrado = buscadorProfundidadIterada.aplicar(cuadroInicial);
-        Arco<CuadroTablero> encontrado = buscadorCostoUniforme.aplicar(cuadroInicial);
+//        Arco<CuadroTablero> encontrado = buscadorCostoUniforme.aplicar(cuadroInicial);
+        Arco<CuadroTablero> encontrado = buscadorAstar.aplicar(cuadroInicial);
         CuadroTablero tableroEncontrado = encontrado.e;
         System.out.println("tablero encontrado:");
         tableroEncontrado.printTablero();
