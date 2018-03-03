@@ -21,17 +21,22 @@ public class Intercambio {
     }
     
     public int[][] direccion(int row, int column ,int[][] matriz, int direc){
+        //System.out.println("row swich: "+row+" column switch "+column+" DIRECCION :"+direc);
         switch(direc){
             case 1:
+               // System.out.println("ARRIBA");
                 matriz = intercambio(row,column,row-1,column,matriz);
                 break;
             case 2:
+                //System.out.println("DERECHA");
                 matriz = intercambio(row,column,row,column+1,matriz);  
                 break;
             case 3:
+                //System.out.println("ABAJO");
                 matriz = intercambio(row,column,row+1,column,matriz);
                 break;
             case 4:
+                //System.out.println("IZQUIERDA");
                 matriz = intercambio(row,column,row,column-1,matriz);                 
                 break;
         }
