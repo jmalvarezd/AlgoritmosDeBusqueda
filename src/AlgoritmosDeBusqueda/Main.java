@@ -22,7 +22,8 @@ public class Main {
         //Astar buscadorAstar = new Astar(sucesorCuadro, objetivoCuadro, new HeuristicaRabon());
         CuadroTablero cuadroInicial = new CuadroTablero();
       cuadroInicial.data = cambio.desordenarMatriz(cuadroInicial.data); //ESTO DESORDENA, SOLO COMENTAR
-        cuadroInicial.printTablero();            
+        System.out.println("Tablero inicial:");  
+      cuadroInicial.printTablero();            
         Arco<CuadroTablero> encontrado = buscadorAmplitud.aplicar(cuadroInicial);
 //        Arco<CuadroTablero> encontrado = buscadorProfundidad.aplicar(cuadroInicial);
   //      Arco<CuadroTablero> encontrado = buscadorProfundidadLimitada.aplicar(cuadroInicial);     
