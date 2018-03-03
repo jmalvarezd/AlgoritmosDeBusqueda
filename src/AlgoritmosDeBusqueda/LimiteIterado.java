@@ -13,41 +13,31 @@ import java.util.Vector;
  */
 public class LimiteIterado<T> extends Busqueda<T>{
     
-    protected int limite = 1;
+    int limite = 1;
+    Sucesor<T> sucesor;
+    Objetivo<T> objetivo;
     
-    public LimiteIterado(Sucesor<T> sucesor, Objetivo<T> objetivo){
-        super(sucesor, objetivo);
+    public LimiteIterado(Sucesor<T> _sucesor, Objetivo<T> _objetivo){
+        super(_sucesor, _objetivo);
+        this.sucesor = _sucesor;
+        this.objetivo = _objetivo;
     }
     
-    @Override
+ @Override
     public Arco<T> aplicar(T inicial){
-         
-        ColBusqueda<T> c = coleccion();
-        c.adicionar(new Arco<T>(inicial, null, -1,0));
-        Arco<T> actual = c.obtener();
-        int profundidad = actual.accionAcumulada;
-        while(!objetivo.es(actual.getE())){
-            while(!c.esvacia() && !objetivo.es(actual.getE())){
-                c.remover();
-                Vector<EstAcc<T>> h = sucesor.obtener(actual.getE());
-                if(profundidad<=limite){
-                    for(EstAcc<T> e:h){
-                        c.adicionar(new Arco<T>(e.getEstado(), actual.getE(), e.getAccion(), actual.accionAcumulada+1));
-                    }
-                    profundidad++;
-                }
-                actual = c.obtener();
+        Arco<T> respuesta = null;
+        while(respuesta ==null){       
+            DFSLimitado limit = new DFSLimitado(this.sucesor,this.objetivo,this.limite);
+            respuesta = limit.aplicar(inicial);
+            if(respuesta!=null){
+                return respuesta;
+            }else{
+                this.limite++;
             }
-            limite++;
-        }
-        // return actual // (?)
-        if(!c.esvacia()){
-            return c.obtener();
-        }else{
-            System.out.println("No encontrado");
         }
         return null;
-    }
+   }
+    
     public ColBusqueda<T> coleccion(){
         //return new ColaBusqueda<T>();
         return new PilaBusqueda<T>();

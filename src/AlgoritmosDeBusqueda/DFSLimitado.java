@@ -13,11 +13,13 @@ import java.util.Vector;
  */
 public class DFSLimitado<T> extends Busqueda<T>{
     
-    protected int limite = 4;  //Cambiar para el limite
+    int limite;  //Cambiar para el limite
     
     public DFSLimitado(Sucesor<T> sucesor, Objetivo<T> objetivo, int _limite){
         super(sucesor, objetivo);
+        this.limite = _limite;
     }
+    
     @Override
     public Arco<T> aplicar(T inicial){
   
@@ -28,21 +30,20 @@ public class DFSLimitado<T> extends Busqueda<T>{
         while(!c.esvacia() && !objetivo.es(actual.getE()) ){
             c.remover();
             Vector<EstAcc<T>> h = sucesor.obtener(actual.getE());
-            if(profundidad<=limite){
+            profundidad = actual.accionAcumulada;
+            if(profundidad<this.limite){
                 for(EstAcc<T> e:h){
                     c.adicionar(new Arco<T>(e.getEstado(), actual.getE(), e.getAccion(), actual.accionAcumulada+1));
                 }
-                profundidad++;
+                //profundidad++;
             }
             actual = c.obtener();
-
-
         }
         // return actual // (?)
         if(!c.esvacia()){
             return c.obtener();
         }else{
-            System.out.println("No encontrado");
+            //System.out.println("No encontrado");
         }
         return null;
     }
