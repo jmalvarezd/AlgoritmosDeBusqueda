@@ -46,11 +46,12 @@ public class Intercambio {
     
     public int[][] desordenarMatriz(int[][] matriz){
         Random random = new Random();
+        int numMovimientos = 15;
         int row = 3;
         int column = 3;
-        int randomInteger;
+        int randomInteger = 0;
         Intercambio cambio = new Intercambio();
-        for(int movimientos = 0 ; movimientos <15;movimientos++){          
+        for(int movimientos = 0 ; movimientos <numMovimientos;movimientos++){          
             if ((row == 0 && column == 0)) {
                 randomInteger = random.nextInt(2)+2;
                 switch(randomInteger){
@@ -61,7 +62,6 @@ public class Intercambio {
                         matriz=cambio.direccion(0, 0, matriz,3);
                         break;
                 }
-
             } else if (row == 0 && column == 3) {
                 randomInteger = random.nextInt(2)+3;
                 switch (randomInteger){
@@ -174,7 +174,21 @@ public class Intercambio {
                         matriz=cambio.direccion(row, column, matriz,4);
                         break;
                 }
-            };
+            }
+            switch (randomInteger){
+                case 1:
+                    row--;
+                    break;
+                case 2:
+                    column++;
+                    break;
+                case 3:
+                    row++;
+                   break;
+                case 4:
+                    column--;
+                    break;
+            }
         }
     return matriz;         
     }

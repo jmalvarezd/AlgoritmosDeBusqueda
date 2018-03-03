@@ -21,8 +21,9 @@ public class Main {
 //        CostoUniforme buscadorCostoUniforme = new CostoUniforme(sucesorCuadro, objetivoCuadro);
         //Astar buscadorAstar = new Astar(sucesorCuadro, objetivoCuadro, new HeuristicaRabon());
         CuadroTablero cuadroInicial = new CuadroTablero();
-        cuadroInicial.data = cambio.desordenarMatriz(cuadroInicial.data); //ESTO DESORDENA, SOLO COMENTAR
-            Arco<CuadroTablero> encontrado = buscadorAmplitud.aplicar(cuadroInicial);
+      cuadroInicial.data = cambio.desordenarMatriz(cuadroInicial.data); //ESTO DESORDENA, SOLO COMENTAR
+        cuadroInicial.printTablero();            
+        Arco<CuadroTablero> encontrado = buscadorAmplitud.aplicar(cuadroInicial);
 //        Arco<CuadroTablero> encontrado = buscadorProfundidad.aplicar(cuadroInicial);
   //      Arco<CuadroTablero> encontrado = buscadorProfundidadLimitada.aplicar(cuadroInicial);     
 //       Arco<CuadroTablero> encontrado = buscadorProfundidadIterada.aplicar(cuadroInicial);
