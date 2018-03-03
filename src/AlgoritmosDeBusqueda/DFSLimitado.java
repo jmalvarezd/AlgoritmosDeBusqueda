@@ -13,11 +13,10 @@ import java.util.Vector;
  */
 public class DFSLimitado<T> extends Busqueda<T>{
     
-    protected int limite;
+    protected int limite = 4;  //Cambiar para el limite
     
     public DFSLimitado(Sucesor<T> sucesor, Objetivo<T> objetivo, int _limite){
         super(sucesor, objetivo);
-        this.limite = _limite;
     }
     @Override
     public Arco<T> aplicar(T inicial){

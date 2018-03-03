@@ -15,7 +15,7 @@ public class Main {
         CuadroObjetivo objetivoCuadro = new CuadroObjetivo();
         //BFS buscadorAmplitud = new BFS(sucesorCuadro,objetivoCuadro);
         //DFS buscadorProfundidad = new DFS(sucesorCuadro,objetivoCuadro);
-        //DFSLimitado buscadorProfundidadLimitada = new DFSLimitado(sucesorCuadro,objetivoCuadro,20);
+        //DFSLimitado buscadorProfundidadLimitada = new DFSLimitado(sucesorCuadro,objetivoCuadro);
         LimiteIterado buscadorProfundidadIterada = new LimiteIterado(sucesorCuadro,objetivoCuadro);
         CuadroTablero cuadroInicial = new CuadroTablero();
         //Arco<CuadroTablero> encontrado = buscadorAmplitud.aplicar(cuadroInicial);
