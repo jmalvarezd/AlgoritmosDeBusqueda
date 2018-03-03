@@ -5,7 +5,7 @@
  */
 package AlgoritmosDeBusqueda;
 
-import com.sun.xml.internal.ws.encoding.soap.SOAP12Constants;
+import java.util.Random;
 
 /**
  *
@@ -44,10 +44,140 @@ public class Intercambio {
     }
     
     
-    public int[][] nuevaMatriz(int[][] matriz){
-      for(int movimientos = 0 ; movimientos <15;movimientos++){
+    public int[][] desordenarMatriz(int[][] matriz){
+        Random random = new Random();
+        int row = 3;
+        int column = 3;
+        int randomInteger;
+        Intercambio cambio = new Intercambio();
+        for(int movimientos = 0 ; movimientos <15;movimientos++){          
+            if ((row == 0 && column == 0)) {
+                randomInteger = random.nextInt(2)+2;
+                switch(randomInteger){
+                    case 2:
+                        matriz=cambio.direccion(0, 0, matriz,2);
+                        break;
+                    case 3:
+                        matriz=cambio.direccion(0, 0, matriz,3);
+                        break;
+                }
 
-      }
-        return matriz;  
+            } else if (row == 0 && column == 3) {
+                randomInteger = random.nextInt(2)+3;
+                switch (randomInteger){
+                    case 3:
+                        matriz=cambio.direccion(0, 3, matriz,3);
+                        break;
+                    case 4:
+                        matriz=cambio.direccion(0, 3, matriz,4);
+                        break;
+                }
+
+            } else if (row == 3 && column == 0) {
+                randomInteger = random.nextInt(2)+1;
+                switch (randomInteger){
+                    case 1:
+                        matriz=cambio.direccion(3, 0, matriz,1);
+                        break;
+                    case 2:
+                        matriz=cambio.direccion(3, 0, matriz,2);
+                        break;
+                }
+
+            } else if (row == 3 && column == 3) {
+                randomInteger = random.nextInt(2)+1;
+                if(randomInteger==2)randomInteger=4;
+                switch (randomInteger){
+                    case 1:
+                        matriz=cambio.direccion(3, 3, matriz,1);
+                        break;
+                    case 4:                       
+                        matriz=cambio.direccion(3, 3, matriz,4);
+                        break;
+                }
+
+            }
+            //IF 0 IN EDGES
+            else if (row == 0 || column == 0 || row == 3 || column == 3) {
+                if (row == 0) {
+                    randomInteger = random.nextInt(3)+2;
+                    switch (randomInteger){
+                        case 2:
+                            matriz=cambio.direccion(row, column, matriz,2);
+                            break;
+                        case 3:
+                            matriz=cambio.direccion(row, column, matriz,3);
+                            break;
+                        case 4:
+                            matriz=cambio.direccion(row, column, matriz,4);              
+                            break;
+                    }
+
+                } else if (row == 3) {
+                    randomInteger = random.nextInt(3)+1;
+                    if(randomInteger==3)randomInteger=4;
+                    switch (randomInteger){
+                        case 1:
+                            matriz=cambio.direccion(row, column, matriz,1);
+                            break;
+                        case 2:                       
+                            matriz=cambio.direccion(row, column, matriz,2);
+                            break;
+                        case 4:
+                            matriz=cambio.direccion(row, column, matriz,4);               
+                            break;
+                    }
+
+                } else if (column == 0) {
+                    randomInteger = random.nextInt(3)+1;
+                    switch (randomInteger){
+                        case 1:
+                            matriz=cambio.direccion(row, column, matriz,1);              
+                            break;
+                        case 2:
+                            matriz=cambio.direccion(row, column, matriz,2);
+                            break;
+                        case 3:
+                            matriz=cambio.direccion(row, column, matriz,3);
+                            break;
+                    }
+
+                } else if (column == 3) {
+                    randomInteger = random.nextInt(3)+2;
+                    if(randomInteger==2)randomInteger=1;
+                    switch (randomInteger){
+                        case 1:
+                            matriz=cambio.direccion(row, column, matriz,1);
+                            break;
+                        case 3:
+                            matriz=cambio.direccion(row, column, matriz,3);
+                            break;
+                        case 4:
+                            matriz=cambio.direccion(row, column, matriz,4);
+                            break;
+                    }
+                }
+            // IF 0 IN CENTER
+            } else {                
+                randomInteger = random.nextInt(4)+1;
+                switch (randomInteger){
+                    case 1:
+                        matriz=cambio.direccion(row, column, matriz,1);
+                        break;
+                    case 2:
+                        matriz=cambio.direccion(row, column, matriz,2);
+                        break;
+                    case 3:
+                        matriz=cambio.direccion(row, column, matriz,3);
+                       break;
+                    case 4:
+                        matriz=cambio.direccion(row, column, matriz,4);
+                        break;
+                }
+            };
+        }
+    return matriz;         
     }
 }
+
+

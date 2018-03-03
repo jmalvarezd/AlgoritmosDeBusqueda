@@ -53,7 +53,7 @@ public class CuadroSucesor extends CuadroSucesorAbstracta<CuadroTablero> {
             sucesores.addElement(new EstAcc<CuadroTablero>(aux, 1));
             
             aux = (CuadroTablero) UnoptimizedDeepCopy.copy(estado);
-            aux.data=cambio.direccion(0, 0, aux.data,3);
+            aux.data=cambio.direccion(0, 3, aux.data,3);
             sucesores.addElement(new EstAcc<CuadroTablero>(aux, 1));
             
             return (sucesores);
