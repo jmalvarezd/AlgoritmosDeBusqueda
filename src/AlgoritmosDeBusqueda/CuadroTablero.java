@@ -43,13 +43,13 @@ public class CuadroTablero implements Serializable {
     	this.data[1][3] = CuadroTablero.CUADRO8;
     	this.data[2][0] = CuadroTablero.CUADRO9;
     	this.data[2][1] = CuadroTablero.CUADRO10;
-    	this.data[2][2] = CuadroTablero.CUADRO11;
-    	this.data[2][3] = CuadroTablero.CUADRO12;
+    	this.data[2][2] = CuadroTablero.VACIO;
+    	this.data[2][3] = CuadroTablero.CUADRO11;
     	this.data[3][0] = CuadroTablero.CUADRO13;
         //MODIFICAR
     	this.data[3][1] = CuadroTablero.CUADRO14;
-    	this.data[3][2] = CuadroTablero.VACIO;
-    	this.data[3][3] = CuadroTablero.CUADRO15;
+    	this.data[3][2] = CuadroTablero.CUADRO15;
+    	this.data[3][3] = CuadroTablero.CUADRO12;
     }
 
     public CuadroTablero( int[][] data ){ this.data = data; }

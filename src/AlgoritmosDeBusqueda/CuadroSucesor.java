@@ -25,7 +25,7 @@ public class CuadroSucesor extends CuadroSucesorAbstracta<CuadroTablero> {
         for (int n = 0; n <= 3; n++) {
             for (int m = 0; m <= 3; m++) {
                 if (estado.get(n, m) == 0) {
-                    System.out.println("ENCONTRADO");
+                    //System.out.println("ENCONTRADO");
                     row = n;
                     column = m;
                     encontrado = true;

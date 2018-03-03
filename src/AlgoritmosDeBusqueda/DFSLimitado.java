@@ -21,21 +21,23 @@ public class DFSLimitado<T> extends Busqueda<T>{
     }
     @Override
     public Arco<T> aplicar(T inicial){
-        int profundidad = 0;  
+  
         ColBusqueda<T> c = coleccion();
         c.adicionar(new Arco<T>(inicial, null, -1,0));
         Arco<T> actual = c.obtener();
-        while(!c.esvacia() && !objetivo.es(actual.getE()) && profundidad <= limite){
+        int profundidad = actual.accionAcumulada;
+        while(!c.esvacia() && !objetivo.es(actual.getE()) ){
             c.remover();
             Vector<EstAcc<T>> h = sucesor.obtener(actual.getE());
-            for(EstAcc<T> e:h){
-                c.adicionar(new Arco<T>(e.getEstado(), actual.getE(), e.getAccion(), actual.accionAcumulada+1));
+            if(profundidad<=limite){
+                for(EstAcc<T> e:h){
+                    c.adicionar(new Arco<T>(e.getEstado(), actual.getE(), e.getAccion(), actual.accionAcumulada+1));
+                }
+                profundidad++;
             }
             actual = c.obtener();
-            profundidad = actual.accionAcumulada;
-            if(profundidad>=limite){
-                break;
-            }
+
+
         }
         // return actual // (?)
         if(!c.esvacia()){
