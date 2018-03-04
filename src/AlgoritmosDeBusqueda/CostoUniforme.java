@@ -10,10 +10,12 @@ package AlgoritmosDeBusqueda;
  * @author Usuario
  */
 public class CostoUniforme<T> extends Busqueda<T> {
-    public CostoUniforme(Sucesor<T> sucesor, Objetivo<T> objetivo){
+
+    public CostoUniforme(Sucesor<T> sucesor, Objetivo<T> objetivo) {
         super(sucesor, objetivo);
     }
-    public ColBusqueda<T> coleccion(){
+
+    public ColBusqueda<T> coleccion() {
         return new ColaPrioridadBusqueda<T>();
     }
 }

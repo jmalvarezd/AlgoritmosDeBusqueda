@@ -9,11 +9,13 @@ package AlgoritmosDeBusqueda;
  *
  * @author Jmad
  */
-public class BFS<T> extends Busqueda<T>{
-    public BFS(Sucesor<T> sucesor, Objetivo<T> objetivo){
+public class BFS<T> extends Busqueda<T> {
+
+    public BFS(Sucesor<T> sucesor, Objetivo<T> objetivo) {
         super(sucesor, objetivo);
     }
-    public ColBusqueda<T> coleccion(){
+
+    public ColBusqueda<T> coleccion() {
         //return new ColaBusqueda<T>();
         return new ColaBusqueda<T>();
     }

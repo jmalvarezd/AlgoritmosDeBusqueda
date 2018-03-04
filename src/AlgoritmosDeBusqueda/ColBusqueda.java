@@ -10,9 +10,14 @@ package AlgoritmosDeBusqueda;
  * @author Jmad
  */
 public interface ColBusqueda<T> {
+
     public void adicionar(Arco<T> a);
+
     public boolean esvacia();
+
     public Arco<T> obtener();
+
     public void remover();
+
     public int tamano();
 }

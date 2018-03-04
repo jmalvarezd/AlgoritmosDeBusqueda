@@ -10,18 +10,17 @@ package AlgoritmosDeBusqueda;
  * @author Jmad
  */
 public class PilaBusqueda<T> extends ListaBusqueda<T> {
-    
-    
-    public void adicionar(Arco<T> a){
+
+    public void adicionar(Arco<T> a) {
         tamano++;
         Nodo<T> aux = new Nodo<T>();
         aux.arco = a;
-        if(esvacia()){
+        if (esvacia()) {
             this.cab = this.col = aux;
-        }else{
+        } else {
             aux.sig = this.cab;
             this.cab = aux;
         }
-       
+
     }
 }

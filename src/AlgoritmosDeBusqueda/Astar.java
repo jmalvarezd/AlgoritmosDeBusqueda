@@ -10,15 +10,16 @@ package AlgoritmosDeBusqueda;
  * @author Usuario
  */
 public class Astar<T> extends Busqueda<T> {
-    
+
     protected Heuristica heuristica;
-    
-    public Astar(Sucesor<T> sucesor, Objetivo<T> objetivo,Heuristica heuristica){
-        super(sucesor,objetivo);
+
+    public Astar(Sucesor<T> sucesor, Objetivo<T> objetivo, Heuristica heuristica) {
+        super(sucesor, objetivo);
         this.heuristica = heuristica;
     }
-    public ColBusqueda coleccion(){
+
+    public ColBusqueda coleccion() {
         return new ColaPrioridadBusquedaHeuristica<T>(heuristica);
     }
-    
+
 }
