@@ -3,11 +3,32 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/USUARIO/Documents/GitHub/AlgoritmosDeBusqueda/src/AlgoritmosDeBusqueda/Intercambio.java</file>
-            <file>file:/C:/Users/USUARIO/Documents/GitHub/AlgoritmosDeBusqueda/src/AlgoritmosDeBusqueda/CuadroTablero.java</file>
-            <file>file:/C:/Users/USUARIO/Documents/GitHub/AlgoritmosDeBusqueda/src/AlgoritmosDeBusqueda/Main.java</file>
-            <file>file:/C:/Users/USUARIO/Documents/GitHub/AlgoritmosDeBusqueda/src/AlgoritmosDeBusqueda/LimiteIterado.java</file>
-            <file>file:/C:/Users/USUARIO/Documents/GitHub/AlgoritmosDeBusqueda/src/AlgoritmosDeBusqueda/Busqueda.java</file>
+            <file>file:/D:/Documentos/NetBeansProjects/AlgoritmosDeBusqueda/src/AlgoritmosDeBusqueda/UnoptimizedDeepCopy.java</file>
+            <file>file:/D:/Documentos/NetBeansProjects/AlgoritmosDeBusqueda/src/AlgoritmosDeBusqueda/CuadroTablero.java</file>
+            <file>file:/D:/Documentos/NetBeansProjects/AlgoritmosDeBusqueda/src/AlgoritmosDeBusqueda/CuadroSucesor.java</file>
+            <file>file:/D:/Documentos/NetBeansProjects/AlgoritmosDeBusqueda/src/AlgoritmosDeBusqueda/ColaPrioridadBusqueda.java</file>
+            <file>file:/D:/Documentos/NetBeansProjects/AlgoritmosDeBusqueda/src/AlgoritmosDeBusqueda/CuadroHeuristica.java</file>
+            <file>file:/D:/Documentos/NetBeansProjects/AlgoritmosDeBusqueda/src/AlgoritmosDeBusqueda/DFS.java</file>
+            <file>file:/D:/Documentos/NetBeansProjects/AlgoritmosDeBusqueda/src/AlgoritmosDeBusqueda/BFS.java</file>
+            <file>file:/D:/Documentos/NetBeansProjects/AlgoritmosDeBusqueda/src/AlgoritmosDeBusqueda/HeuristicaManhattan.java</file>
+            <file>file:/D:/Documentos/NetBeansProjects/AlgoritmosDeBusqueda/src/AlgoritmosDeBusqueda/Arco.java</file>
+            <file>file:/D:/Documentos/NetBeansProjects/AlgoritmosDeBusqueda/src/AlgoritmosDeBusqueda/Objetivo.java</file>
+            <file>file:/D:/Documentos/NetBeansProjects/AlgoritmosDeBusqueda/src/AlgoritmosDeBusqueda/LimiteIterado.java</file>
+            <file>file:/D:/Documentos/NetBeansProjects/AlgoritmosDeBusqueda/src/AlgoritmosDeBusqueda/ColaPrioridadBusquedaHeuristica.java</file>
+            <file>file:/D:/Documentos/NetBeansProjects/AlgoritmosDeBusqueda/src/AlgoritmosDeBusqueda/ColaBusqueda.java</file>
+            <file>file:/D:/Documentos/NetBeansProjects/AlgoritmosDeBusqueda/src/AlgoritmosDeBusqueda/Heuristica.java</file>
+            <file>file:/D:/Documentos/NetBeansProjects/AlgoritmosDeBusqueda/src/AlgoritmosDeBusqueda/PilaBusqueda.java</file>
+            <file>file:/D:/Documentos/NetBeansProjects/AlgoritmosDeBusqueda/src/AlgoritmosDeBusqueda/ListaBusqueda.java</file>
+            <file>file:/D:/Documentos/NetBeansProjects/AlgoritmosDeBusqueda/src/AlgoritmosDeBusqueda/Astar.java</file>
+            <file>file:/D:/Documentos/NetBeansProjects/AlgoritmosDeBusqueda/src/AlgoritmosDeBusqueda/Intercambio.java</file>
+            <file>file:/D:/Documentos/NetBeansProjects/AlgoritmosDeBusqueda/src/AlgoritmosDeBusqueda/CuadroSucesorAbstracta.java</file>
+            <file>file:/D:/Documentos/NetBeansProjects/AlgoritmosDeBusqueda/src/AlgoritmosDeBusqueda/CuadroObjetivo.java</file>
+            <file>file:/D:/Documentos/NetBeansProjects/AlgoritmosDeBusqueda/src/AlgoritmosDeBusqueda/Busqueda.java</file>
+            <file>file:/D:/Documentos/NetBeansProjects/AlgoritmosDeBusqueda/src/AlgoritmosDeBusqueda/Main.java</file>
+            <file>file:/D:/Documentos/NetBeansProjects/AlgoritmosDeBusqueda/src/AlgoritmosDeBusqueda/HeuristicaRabon.java</file>
+            <file>file:/D:/Documentos/NetBeansProjects/AlgoritmosDeBusqueda/src/AlgoritmosDeBusqueda/CostoUniforme.java</file>
+            <file>file:/D:/Documentos/NetBeansProjects/AlgoritmosDeBusqueda/src/AlgoritmosDeBusqueda/DFSLimitado.java</file>
+            <file>file:/D:/Documentos/NetBeansProjects/AlgoritmosDeBusqueda/src/AlgoritmosDeBusqueda/ColBusqueda.java</file>
         </group>
     </open-files>
 </project-private>
